@@ -4,6 +4,11 @@
 	"displayName": "mtgatool log inspector",
 	"description": "",
 	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mtgatool/arena-log-inspector"
+	},
+	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
