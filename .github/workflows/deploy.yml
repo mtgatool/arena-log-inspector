@@ -22,7 +22,7 @@ jobs:
       with:
         run: npm test
     - name: Publish
-      if: ${{success() && matrix.os == 'ubuntu-latest'}}
+      if: success()
       run: npm run deploy
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}
