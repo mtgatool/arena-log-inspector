@@ -1,9 +1,4 @@
 on:
-  push:
-    branches:
-    - master
-    tags:
-    - '*'
   release:
     types:
     - created
@@ -27,7 +22,7 @@ jobs:
       with:
         run: npm test
     - name: Publish
-      if: success() && startsWith( github.ref, 'refs/tags/releases/') && matrix.os == 'ubuntu-latest'
+      if: success() && matrix.os == 'ubuntu-latest'
       run: npm run deploy
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}
